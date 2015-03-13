@@ -1,0 +1,262 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs"
+    Inherits="MappsApp.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Proyecto Android</title>
+    <link href="Resources/css/index.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="Resources/images/Mapps.ico" />    
+    <link rel="shortcut icon" href="Resources/images/Mapps.ico"/>
+    <link href="Resources/css/Menu.css" rel="stylesheet" type="text/css" />
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="Resources/js/jquery.slides.min.js"></script>
+    <header> 
+        <p> Esta es la cabecera: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus facilisis velit, nec faucibus nunc lobortis eget. Etiam quis pulvinar neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus facilisis velit, nec faucibus nunc lobortis eget. Etiam quis pulvinar neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus facilisis velit, nec faucibus nunc lobortis eget. Etiam quis pulvinar neque</p>
+    </header>
+
+    <style type="text/css">
+    	* {
+		    margin: 0;
+		    padding: 20;
+		}
+		html {
+		    font-family: Arial, Helvetica;
+		    font-size: 12px;
+		  /*  color: #eee;*/
+		}
+		body {
+		   /* background-color: #222;  */  
+		}
+		h1 {
+		    font-family: Helvetica, Arial;
+		    font-size: 40px;
+		    font-weight: bold;
+		    margin: 10px 0 10px 0;
+		}
+		h1 a {
+		    text-decoration: none;
+		    color: #8cbf26;
+		}
+		h1 a:hover {
+		    text-decoration: underline;
+		}
+		p {
+		    margin-bottom: 15px;
+		    text-align: justify;
+		}
+		header {
+		    color: yellow;
+		    max-width: 860px;
+		    margin: auto;
+		    margin-top: 20px; 
+		}
+		.content, footer {
+		    max-width: 960px;
+		    margin: auto;
+		}
+
+		/*** Sticky Menu ***/
+		nav {
+
+		    background-color: #1ba1e2;
+		    height: 35px;
+		    line-height:  40px;
+
+
+		   -webkit-border-radius:10px;
+	 -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.5);
+	 -moz-border-radius:10px;
+	 -moz-box-shadow:0 0 20px rgba (0,0,0,0.5);
+	 -o-border-radius:10px;
+	 -o-box-shadow: 0 0 20px rgba(0,0,0,0.5);
+	 
+	 /*background: #fff;
+	 border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);
+	 font-family: 'Confortaa',sans-serif;
+	 font-size:  18px;
+	 margin: 0 auto;
+	 padding: 30px;*/
+	 width: 1150px; 
+	   margin:40px; 
+
+	 
+	 
+	
+
+
+		    
+		}
+		nav ul {
+		    width: 716px;
+		    margin: auto;
+            height: 34px;
+        }
+		nav ul li {
+		    line-height: 35px;
+		    display: inline-block;
+		    padding-right: 50px;
+            width: 59px;
+            height: 33px;
+        }
+		nav ul li a {
+		    text-decoration: none;
+		    color: #fff;
+		    font-weight: bold;
+		    margin-bottom: 2em; width:100%;margin-right:-2em
+		}
+		nav ul li a:hover {
+		    text-decoration: underline;
+		}
+		.fixed {
+		    position:fixed;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		}
+
+    </style>
+    <style type="text/css">
+        .slidesjs-pagination li a
+        {
+            display: block;
+            width: 13px;
+            height: 0;
+            padding-top: 13px;
+            background-image: url(Resources/images/pagination.png);
+            background-position: 0 0;
+            float: left;
+            overflow: hidden;
+        }
+        .style1
+        {
+            width: 123%;
+            background-color: #ececec;
+            text-align: center;
+            /*height: 39px;*/
+            color:Black;            
+        }
+        
+        .tdTable:hover
+        {
+            background-color: Teal;
+            cursor: pointer;
+            color:White;
+        }
+
+        .content, footer {
+		    max-width: 960px;
+		    margin: auto;
+		}
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.slides').slidesjs({
+                width: 1190,
+                height: 528,
+                navigation: false
+            });
+        });
+  </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+         <p> Esta es la cabecera: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus facilisis velit, nec faucibus nunc lobortis eget. Etiam quis pulvinar neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus facilisis velit, nec faucibus nunc lobortis eget. Etiam quis pulvinar neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus facilisis velit, nec faucibus nunc lobortis eget. Etiam quis pulvinar neque.</p>
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#login-trigger').click(function () {
+                $(this).next('#login-content').slideToggle();
+                $(this).toggleClass('active');
+
+                if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+                else $(this).find('span').html('&#x25BC;')
+            })
+        });
+             </script>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+<nav>
+        <ul>
+            <li><a href="Index.aspx">Index.aspx</a></li>
+            <li><a href="Eventos.aspx">Eventos</a></li>
+            <li><a href="WebForm1.aspx">formulario</a></li>
+            <li><a href="Sesion.aspx">Sesion</a></li>
+        </ul>
+    </nav>
+    
+  
+            
+                    
+    </div> 
+
+
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+          <div class="content">  
+         </div>  
+
+    <footer> 
+        <h1>Este es es el Footer</h1>
+
+        
+            
+    </footer>  
+
+    </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <div>
+            
+        </div>
+    </asp:ContentPlaceHolder>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        // Llamado cuando se cargue la página
+        posicionarMenu();
+
+        $(window).scroll(function () {
+            posicionarMenu();
+        });
+
+
+
+        function posicionarMenu() {
+            var altura_del_header = $('header').outerHeight(true);
+            var altura_del_menu = $('nav').outerHeight(true);
+
+            if ($(window).scrollTop() >= altura_del_header) {
+                $('nav').addClass('fixed');
+                $('.content').css('margin-top', (altura_del_menu) + 'px');
+            } else {
+                $('nav').removeClass('fixed');
+                $('.content').css('margin-top', '0');
+            }
+        }
+    </script>
+  
+
+    <div style="margin-left:169px; margin-right:166px; border:1px dashed black; height: 84px; padding-top:10px; padding:10px; ">
+        <asp:Label Text="CSS Valid | Desarrollo WEb | Top 2015" runat="server" 
+            ForeColor="#006600" />
+        <br />
+        <asp:Label Text="Copyright Salitre Plaza 2015, Todos los derechos reservados - " Font-Bold="true" runat="server" />
+        <a style="font-size:14px;">Salitre plaza.</a>
+        <img src="Resources/images/sus.png" style="height: 53px; width: 170px; margin-top:0px; float:right;" />
+    </div>
+       
+    
+    </form>
+
+    <div>
+    
+    </div>
+</body>
+</html>

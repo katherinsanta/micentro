@@ -1,0 +1,185 @@
+﻿nav ul {
+margin:0;
+padding:0;
+list-style:none;
+position:relative;
+float:right;
+background:#eee;
+border-bottom:1px solid #fff;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+    top: 50px;
+    left: -56px;
+}
+
+
+nav li {
+float:left;
+
+
+
+}
+
+nav #login {  
+  border-right: 1px solid #ddd;  
+  -moz-box-shadow: 1px 0 0 #fff;  
+  -webkit-box-shadow: 1px 0 0 #fff;  
+  box-shadow: 1px 0 0 #fff;   
+ background: #eee;
+    height: 20px;
+    width: 189px;
+}  
+  
+nav #login-trigger,  
+nav #signup a {  
+  display: inline-block;  
+  *display: inline;  
+  *zoom: 1;  
+  height: 25px;  
+  line-height: 25px;  
+  font-weight: bold;  
+  padding: 0 8px;  
+  text-decoration: none;  
+  color: #444444;  
+  background:#eeeeee;  
+}  
+  
+nav #signup a {  
+  -moz-border-radius: 0 3px 3px 0;  
+  -webkit-border-radius: 0 3px 3px 0;  
+  border-radius: 0 3px 3px 0;  
+   background: #eeeeee;  
+}  
+  
+nav #login-trigger {  
+  -moz-border-radius: 3px 0 0 3px;  
+  -webkit-border-radius: 3px 0 0 3px;  
+  border-radius: 3px 0 0 3px;  
+}  
+  
+nav #login-trigger:hover,  
+nav #login .active,  
+nav #signup a:hover {  
+  
+   background:#E7A34C;  
+   color:#ffffff;  
+}  
+  
+nav #login-content {  
+  display: none;  
+  position: absolute;  
+  top: 24px;  
+  right: 0;  
+  z-index: 999;     
+  background: #ffffff;  
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#E7A34C), to(#fff));  
+  background-image: -webkit-linear-gradient(top, #E7A34C, #fff);  
+  background-image: -moz-linear-gradient(top, #E7A34C, #fff);  
+  background-image: -ms-linear-gradient(top, #E7A34C, #fff);  
+  background-image: -o-linear-gradient(top, #E7A34C, #fff);  
+  background-image: linear-gradient(top, #E7A34C, #fff);   
+  padding: 15px;  
+  -moz-box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);  
+  -webkit-box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);  
+  box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);  
+  -moz-border-radius: 3px 0 3px 3px;  
+  -webkit-border-radius: 3px 0 3px 3px;  
+  border-radius: 3px 0 3px 3px;  
+}  
+  
+nav li #login-content {  
+  right: 0;  
+  width: 280px;   
+}  
+  
+/*--------------------*/  
+  
+#inputs input {  
+  background: #f1f1f1;  
+  padding: 6px 5px;  
+  margin: 0 0 5px 0;  
+  width: 238px;  
+  border: 1px solid #ccc;  
+  -moz-border-radius: 3px;  
+  -webkit-border-radius: 3px;  
+  border-radius: 3px;  
+  -moz-box-shadow: 0 1px 1px #ccc inset;  
+  -webkit-box-shadow: 0 1px 1px #ccc inset;  
+  box-shadow: 0 1px 1px #ccc inset;  
+}  
+  
+#inputs input:focus {  
+  background-color: #fff;  
+  border-color: #e8c291;  
+  outline: none;  
+  -moz-box-shadow: 0 0 0 1px #e8c291 inset;  
+  -webkit-box-shadow: 0 0 0 1px #e8c291 inset;  
+  box-shadow: 0 0 0 1px #e8c291 inset;  
+}  
+  
+/*--------------------*/  
+  
+#login #actions {  
+  margin: 10px 0 0 0;  
+}  
+  
+#login .submit {                                
+  background-color: #3F80EC;  
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f06015), to(#f88e11));  
+  background-image: -webkit-linear-gradient(top, #f06015, #f88e11);  
+  
+  background-image: -moz-linear-gradient(top, #f06015, #f88e11);  
+  background-image: -ms-linear-gradient(top, #f06015, #f88e11);  
+  background-image: -o-linear-gradient(top, #f06015, #f88e11);  
+  background-image: linear-gradient(top, #f06015, #f88e11);  
+  -moz-border-radius: 3px;  
+  -webkit-border-radius: 3px;  
+  border-radius: 3px;  
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);  
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;  
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;  
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;     
+  border: 1px solid #7e1515;  
+  float: left;  
+  height: 30px;  
+  padding: 0;  
+  width: 100px;  
+  cursor: pointer;  
+  font: bold 14px Arial, Helvetica;  
+  color: #fff;  
+}  
+  
+#login .submit:hover,  
+#login .submit:focus {                   
+  background-color: #e97171;  
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));  
+background-image: -webkit-linear-gradient(top, #f88e11, #f06015);  
+  background-image: -moz-linear-gradient(top, #f88e11, #f06015);  
+  background-image: -ms-linear-gradient(top, #f88e11, #f06015);  
+  background-image: -o-linear-gradient(top, #f88e11, #f06015);  
+  background-image: linear-gradient(top, #f88e11, #f06015);  
+}               
+  
+#login .submit:active {                  
+  outline: none;  
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;  
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;  
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;                                
+}  
+  
+#login .submit::-moz-focus-inner {  
+  border: none;  
+}  
+  
+#login label {  
+  float: right;  
+  line-height: 30px;  
+}  
+  
+#login label input {  
+  position: relative;  
+  top: 2px;  
+  right: 2px;  
+} 
+

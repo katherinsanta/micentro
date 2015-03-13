@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CentroComercial" Class="DatosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESARROLLORS02;Initial Catalog=CentroComercial;User ID=sa" SettingsObjectName="Datos_Center.Properties.Settings" SettingsPropertyName="CentroComercialConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Categoria" Member="Categoria">
+    <Type Name="Categoria">
+      <Column Name="Id_Categoria" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Categoria_Locales" Member="Locales" ThisKey="Id_Categoria" OtherKey="Id_Categoria" Type="Locales" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Eventos" Member="Eventos">
+    <Type Name="Eventos">
+      <Column Name="Id_Evento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreEvento" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DescripcionEvento" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="Eventos_Locales" Member="Locales" ThisKey="Id_Evento" OtherKey="Id_Evento" Type="Locales" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Locales" Member="Locales">
+    <Type Name="Locales">
+      <Column Name="Id_Local" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreLocal" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Ubicacion" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Horario" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Id_Categoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Id_Evento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Categoria_Locales" Member="Categoria" ThisKey="Id_Categoria" OtherKey="Id_Categoria" Type="Categoria" IsForeignKey="true" />
+      <Association Name="Eventos_Locales" Member="Eventos" ThisKey="Id_Evento" OtherKey="Id_Evento" Type="Eventos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuarios" Member="Usuarios">
+    <Type Name="Usuarios">
+      <Column Name="Id_Usuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Contrasena" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.IniciarSesion" Method="IniciarSesion">
+    <Parameter Name="Usuario" Parameter="usuario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Contrasena" Parameter="contrasena" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="IniciarSesionResult">
+      <Column Name="Usuario" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Contrasena" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertarCategoria" Method="InsertarCategoria">
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertarEvento" Method="InsertarEvento">
+    <Parameter Name="NombreEvento" Parameter="nombreEvento" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="DescripcionEvento" Parameter="descripcionEvento" Type="System.String" DbType="NVarChar(250)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertarLocal" Method="InsertarLocal">
+    <Parameter Name="NombreLocal" Parameter="nombreLocal" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="Ubicacion" Parameter="ubicacion" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="Horario" Parameter="horario" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="Id_Categoria" Parameter="id_Categoria" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Id_Evento" Parameter="id_Evento" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Lista_Eventos_x_UbicacionLocal" Method="Lista_Eventos_x_UbicacionLocal">
+    <Parameter Name="Id_Local" Parameter="id_Local" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Lista_Eventos_x_UbicacionLocalResult">
+      <Column Name="NombreLocal" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="NombreEvento" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DescripcionEvento" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Id_Local" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ubicacion" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Nombre1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ListaLocal_AtributosCategorias" Method="ListaLocal_AtributosCategorias">
+    <Parameter Name="Id_Categoria" Parameter="id_Categoria" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ListaLocal_AtributosCategoriasResult">
+      <Column Name="NombreLocal" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Ubicacion" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Horario" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Id_Local" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ListarLocalXstring" Method="ListarLocalXstring">
+    <Parameter Name="NombreLocal" Parameter="nombreLocal" Type="System.String" DbType="VarChar(250)" />
+    <ElementType Name="ListarLocalXstringResult">
+      <Column Name="NombreLocal" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Ubicacion" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Horario" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
