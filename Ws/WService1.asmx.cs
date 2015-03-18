@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Services;
 using Datos_Center;
 using  System.Data.SqlClient;
+
 namespace Ws
 {
     /// <summary>
@@ -53,6 +54,28 @@ namespace Ws
         
         
     }
+
+
+           DatosDataContext DB = new DatosDataContext();
+
+           [WebMethod]
+           public bool InicioSesion(string Usuario, string Contrasena)
+           {
+
+               if (DB.IniciarSesion(Usuario, Contrasena).Count() == 0) { 
+                   
+                   return false; 
+               
+               }
+             
+               
+               else
+               {
+
+                   return true;
+               }
+
+           }
     }
     }
 

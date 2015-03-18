@@ -186,10 +186,10 @@
     <form id="form1" runat="server">
 <nav>
         <ul>
-            <li><a href="Index.aspx">Index.aspx</a></li>
+            <li><a href="Index.aspx">Incio</a></li>
             <li><a href="Eventos.aspx">Eventos</a></li>
-            <li><a href="WebForm1.aspx">formulario</a></li>
-            <li><a href="Sesion.aspx">Sesion</a></li>
+            <li><a href="WebForm1.aspx">A la espera</a></li>
+            <li><a href="Sesion.aspx">Admi</a></li>
         </ul>
     </nav>
     

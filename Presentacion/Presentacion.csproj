@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -91,7 +92,6 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Eventos.aspx.cs">
@@ -130,13 +130,6 @@
     <Compile Include="Sesion.aspx.designer.cs">
       <DependentUpon>Sesion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.Master" />
@@ -152,6 +145,10 @@
     <ProjectReference Include="..\Datos_Center\Datos_Center.csproj">
       <Project>{74a92032-f6e7-4309-a12b-6fe4275beabb}</Project>
       <Name>Datos_Center</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ws\Ws.csproj">
+      <Project>{1a2f1ea9-aed2-4041-9729-ed57e7764fc0}</Project>
+      <Name>Ws</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

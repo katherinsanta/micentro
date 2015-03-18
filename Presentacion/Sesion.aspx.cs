@@ -5,24 +5,53 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Datos_Center;
+using System.Windows.Forms;
+
+using Ws;
+
+
 
 namespace Presentacion
 {
+    
     public partial class Sesion : System.Web.UI.Page
     {
-        DatosDataContext ws = new DatosDataContext();
+        WService1  dao = new WService1();
 
+       
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+            
         }
-
+        
+       
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            ws.IniciarSesion(Txt_Contrasena.Text, Txt_Usuario.Text);
+            this.Session["islogin"] = Txt_Contrasena.Text;
+            
 
 
-            Response.Redirect("Eventos.aspx");
+
+            if (dao.InicioSesion(Txt_Usuario.Text, Txt_Contrasena.Text) == true)
+            {
+                Session["islogin"] = true;
+                Response.Redirect("Index.aspx");
+
+            }
+            else
+            {
+
+
+                //Response.Write("<script language='JavaScript'>alert('No se pudo iniciar sesion !!!');</script>");
+
+                MessageBox.Show("no se pudo inicion");
+                return;
+
+
+            }
+            
+             
         }
     }
 }
